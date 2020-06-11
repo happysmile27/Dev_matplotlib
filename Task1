@@ -1,0 +1,17 @@
+import pandas as pd
+
+crime_df = pd.read_csv("/Users/olhafedyshyn/DevRepublic/US_Crime_Rates_1960_2014.csv")
+print(crime_df.head(2))
+
+import matplotlib.pyplot as plt
+
+crime_df = pd.read_csv("/Users/olhafedyshyn/DevRepublic/US_Crime_Rates_1960_2014.csv")
+
+
+plt.plot(crime_df["Year"], crime_df["Total"], color="green")
+plt.plot(crime_df["Year"], crime_df["Population"], color="blue")
+plt.xlabel("Year")
+plt.ylabel("Total")
+plt.title("Population and total crimes by year")
+plt.legend(["Total crimes", "Population"])
+plt.show()
